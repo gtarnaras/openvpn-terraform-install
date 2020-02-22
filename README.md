@@ -1,4 +1,4 @@
-# A Comprehensive OpenVPN Server Solution in AWS with Terraform
+# OpenVPN on AWS 
 
 This repository contains a one-stop Terraform module that creates a single node [OpenVPN Server](https://en.wikipedia.org/wiki/OpenVPN) in a dedicated AWS VPC and subnet. The OpenVPN server is configured to be readily accessible by the users supplied in the Terraform input file. The same Terraform input file can be used to subsequently update the list of authorised users.
 
@@ -26,7 +26,7 @@ set_me_up.sh <region> <aws_credentials_file> <profile> <ovpn_users>
 e.g. ./set_me_up.sh us-east-1 ~/.aws/credentials <default> <userone,usertwo>
 ```
 
-The OpenVPN configuration file can be found under dir
+The OpenVPN configuration file can be found under the following directory:
 ```
 generated/ovpn-config/userOne.ovpn
 ```
@@ -39,6 +39,11 @@ sudo openvpn --config generated/ovpn-config/userOne.ovpn
 Or just double click the .ovpn file using your window manager to import it...
 
 ## Architecture
+
+The installation always use the latest Amazon_Linux_2 AMI, it does not make use of the Workplace's OpenVPN AMI. That means that the only
+cost incurred is from the common AWS resources.
+
+[Architecture](./documentation/Archictecture.png)
 
 ## Setup
 
