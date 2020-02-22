@@ -143,3 +143,7 @@ sudo openvpn --config generated/ovpn-config/userOne.ovpn
 ## Credits
 
 This repository relies on the great [openvpn-install.sh](https://github.com/angristan/openvpn-install/blob/master/openvpn-install.sh) Bash script from [https://github.com/angristan/openvpn-install](https://github.com/angristan/openvpn-install) to do the OpenVPN plumbing under the bonnet. Keep up the good work, Stanislas Lange, aka [angristan](https://angristan.xyz/)!
+
+## FAQ
+
+See ./documentation/FAQ.md
