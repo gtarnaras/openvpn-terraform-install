@@ -19,9 +19,9 @@ Moreover, you probably had enough of people snooping on you and want some privac
 ### QuickStart Installation
 
 ```
-set_me_up.sh <region> <aws_credentials_file> <profile> <ovpn_users>
+set_me_up.sh -r <region> -c <aws_credentials_file> -p <profile> -u <ovpn_users>
 
-e.g. ./set_me_up.sh -region us-east-1 -credentials ~/.aws/credentials -profile default -users userOne,userTwo
+e.g. ./set_me_up.sh -r us-east-1 -c ~/.aws/credentials -p default -u userOne,userTwo
 ```
 
 The OpenVPN configuration file can be found under the following directory:
@@ -47,12 +47,12 @@ cost incurred is that from using common AWS resources.
 
 Comprehensive setup instructions can be found in the following section [Setup](./documentation/Setup.md)
 
+## FAQ
+
+See [FAQ](./documentation/FAQ.md)
+
 ## Credits
 
 > Thanks https://www.how-hard-can-it.be/author/dominic/ for providing the initial repo. This repo is a fork.
 
 >This repository relies on the great [openvpn-install.sh](https://github.com/angristan/openvpn-install/blob/master/openvpn-install.sh) Bash script from [https://github.com/angristan/openvpn-install](https://github.com/angristan/openvpn-install) to do the OpenVPN plumbing under the bonnet. Keep up the good work, Stanislas Lange, aka [angristan](https://angristan.xyz/)!
-
-## FAQ
-
-See [FAQ](./documentation/FAQ.md)

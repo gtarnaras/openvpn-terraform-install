@@ -3,6 +3,11 @@
 usage()
 {
     echo "usage: set_me_up.sh -r us-east-1 -c ~/.aws/credentials -p default -u userOne,userTwo"
+    echo "-r : REGION: aws region, e.g. aws-east-1"
+    echo "-c : AWS_CREDENTIALS: aws credentials, usually under ~/.aws/credentials"
+    echo "-p : AWS_PROFILE: aws profile, specify your aws profile to use"
+    echo "-u : OVPN_USER_PROFILES: comma seperated list of ovpn user settings to crate, e.g. userOne,userTwo"
+
 }
 
 populate_settings()
@@ -34,7 +39,7 @@ execute_setup()
 ###########################################
 
 unset option
-while getopts r:c:p:u: option
+while getopts r:c:p:u:h option
 do
     case ${option} in
         r)
@@ -59,7 +64,10 @@ do
             done
             USERS=$(echo $certString | sed 's/,$//')
         ;;
-        :) echo "Invalid option"
+        *)
+            usage
+            exit 1
+        ;;
     esac
 done
 
