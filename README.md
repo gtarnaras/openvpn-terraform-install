@@ -21,7 +21,7 @@ Moreover, you probably had enough of people snooping on you and want some privac
 ```
 set_me_up.sh <region> <aws_credentials_file> <profile> <ovpn_users>
 
-e.g. ./set_me_up.sh --region us-east-1 --credentials ~/.aws/credentials --profile default --users userOne,userTwo
+e.g. ./set_me_up.sh -region us-east-1 -credentials ~/.aws/credentials -profile default -users userOne,userTwo
 ```
 
 The OpenVPN configuration file can be found under the following directory:
