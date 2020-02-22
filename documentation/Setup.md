@@ -1,7 +1,15 @@
 
 ## Setup
 
-The minimal setup leverages as much of the default settings in [variables.tf](variables.tf) as possible. However some input is required.
+## You Want
+
+After running the Terraform module in this repository you get
+ - an EC2 node running in a dedicated VPC and subnet
+ - an OpenVPN server bootstrapped on the EC2 node by the excellent [openvpn-install.sh](https://github.com/angristan/openvpn-install/blob/master/openvpn-install.sh) Bash script from [https://github.com/angristan/openvpn-install](https://github.com/angristan/openvpn-install)
+ - SSH access to the OpenVPN sever locked down to the IP address of the machine executing the Terraform module (see the FAQs for how to handle drift over time)
+ - the list of users supplied as input to the Terraform module readily provisioned on the OpenVPN server
+ - the configuration of each user supplied in the Terraform configuration downloaded onto the local machine and ready for use
+ - the option to provision and revoke users from the OpenVPN server by simply re-running the Terraform module The minimal setup leverages as much of the default settings in [variables.tf](variables.tf) as possible. However some input is required.
 
 ### Providing SSH Keys
 
@@ -108,3 +116,5 @@ Assuming a valid OpenVPN configuration has been downloaded to `generated/ovpn-co
 sudo openvpn --config generated/ovpn-config/userOne.ovpn 
 ```
 > Note that the above command will actually change your network settings and hence public IP.
+
+> For further information, see the corresponding article on [Ready to Use OpenVPN Servers in AWS For Everyone](https://www.how-hard-can-it.be/openvpn-server-install-terraform-aws/?utm_source=GitHub&utm_medium=social&utm_campaign=README) on [How Hard Can It Be?!](https://www.how-hard-can-it.be/?utm_source=GitHub&utm_medium=social&utm_campaign=README).
