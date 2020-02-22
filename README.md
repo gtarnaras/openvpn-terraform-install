@@ -146,4 +146,4 @@ This repository relies on the great [openvpn-install.sh](https://github.com/angr
 
 ## FAQ
 
-See ./documentation/FAQ.md
+See [FAQ](./documentation/FAQ.md)
