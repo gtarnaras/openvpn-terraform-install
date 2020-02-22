@@ -21,7 +21,11 @@ Moreover, you probably had enough of people snooping on you and want some privac
 ```
 set_me_up.sh -r <region> -c <aws_credentials_file> -p <profile> -u <ovpn_users>
 
-e.g. ./set_me_up.sh -r us-east-1 -c ~/.aws/credentials -p default -u userOne,userTwo
+usage: set_me_up.sh -r us-east-1 -c ~/.aws/credentials -p default -u userOne,userTwo
+-r : REGION: aws region, e.g. aws-east-1
+-c : AWS_CREDENTIALS: aws credentials, usually under ~/.aws/credentials
+-p : AWS_PROFILE: aws profile, specify your aws profile to use
+-u : OVPN_USER_PROFILES: comma seperated list of ovpn user settings to crate, e.g. userOne,userTwo
 ```
 
 The OpenVPN configuration file can be found under the following directory:
