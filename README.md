@@ -47,11 +47,13 @@ cost incurred is from the common AWS resources.
 
 ## Setup
 
-More details on the setup can be found here [Setup](./documentation/Setup.md)
+Comprehensive setup instructions can be found in the following section [Setup](./documentation/Setup.md)
 
 ## Credits
 
-This repository relies on the great [openvpn-install.sh](https://github.com/angristan/openvpn-install/blob/master/openvpn-install.sh) Bash script from [https://github.com/angristan/openvpn-install](https://github.com/angristan/openvpn-install) to do the OpenVPN plumbing under the bonnet. Keep up the good work, Stanislas Lange, aka [angristan](https://angristan.xyz/)!
+> Thanks https://www.how-hard-can-it.be/author/dominic/ for providing the initial code. This repo is a fork.
+
+>This repository relies on the great [openvpn-install.sh](https://github.com/angristan/openvpn-install/blob/master/openvpn-install.sh) Bash script from [https://github.com/angristan/openvpn-install](https://github.com/angristan/openvpn-install) to do the OpenVPN plumbing under the bonnet. Keep up the good work, Stanislas Lange, aka [angristan](https://angristan.xyz/)!
 
 ## FAQ
 
