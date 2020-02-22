@@ -2,7 +2,7 @@
 
 This repository contains a one-stop Terraform module that creates a single node [OpenVPN Server](https://en.wikipedia.org/wiki/OpenVPN) in a dedicated AWS VPC and subnet. The OpenVPN server is configured to be readily accessible by the users supplied in the Terraform input file. The same Terraform input file can be used to subsequently update the list of authorised users.
 
-The master branch in this repository is compliant with [Terraform v0.12](https://www.terraform.io/upgrade-guides/0-12.html);
+The master branch in this repository is compliant with [Terraform v0.12](https://www.terraform.io/upgrade-guides/0-12.html).
 
 ## Getting Started
 
@@ -17,6 +17,12 @@ Before you can use the Terraform module in this repository out of the box, you n
 Moreover, you probably had enough of people snooping on you and want some privacy back or just prefer to have a long lived static IP.
 
 ### QuickStart Installation
+
+The ec2 flavor that is being used by default is the t3.micro which is eligible for the free tier of AWS.
+You will be assigned an IP according to the region you will specify below.
+e.g. If you choose eu-west-2 you will get a UK ip.
+
+You can see here https://docs.aws.amazon.com/general/latest/gr/rande.html all the available regions.
 
 ```
 set_me_up.sh -r <region> -c <aws_credentials_file> -p <profile> -u <ovpn_users>
