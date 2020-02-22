@@ -43,7 +43,7 @@ Or just double click the .ovpn file using your window manager to import it...
 The installation always use the latest Amazon_Linux_2 AMI, it does not make use of the Workplace's OpenVPN AMI. That means that the only
 cost incurred is from the common AWS resources.
 
-[Architecture](./documentation/Archictecture.png)
+[Architecture](./documentation/Architecture.png)
 
 ## Setup
 
